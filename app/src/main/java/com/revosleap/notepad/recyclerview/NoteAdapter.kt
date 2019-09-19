@@ -1,13 +1,13 @@
 package com.revosleap.notepad.recyclerview
 
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.revosleap.notepad.R
 import com.revosleap.notepad.interfaces.ViewHolderItemClicked
 
 class NoteAdapter(var noteList: MutableList<Notes>,viewHolderItemClicked: ViewHolderItemClicked)
-    : RecyclerView.Adapter<ViewHolder>() {
+    : androidx.recyclerview.widget.RecyclerView.Adapter<ViewHolder>() {
      var itemClicked: ViewHolderItemClicked= viewHolderItemClicked
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): ViewHolder {
         return ViewHolder(LayoutInflater.from(p0.context).inflate(R.layout.item_viewholder,p0,false))
